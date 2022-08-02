@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- https://github.com/kolosov-sergey/webgl_blog/blob/master/ol/BasicLayers/index.html -->    
+    <meta charset="utf-8">
+    <title>Редактор плейлистов IPTV</title>    
+</head>
+<link rel="stylesheet" href="m3u8-edit.css">
+<script src="m3u8-edit.js"></script>
+<body>
+   
+   <div id="tbl">
+   <h1>IPTV Playlist Editor</h1>
+   <label>TV-Guide: &nbsp;</label>
+   <input type="text" id="tvg" style="width: 60%;" ><br>
+   <label>Icons URL:</label>
+   <input type="text" id="iconUrl" style="width: 60%;" >
+   <br>
+   <table id="mainTbl">
+    <thead>
+        <tr>
+            <th class="mc">No</th>
+            <th class="mc">Name</th>
+            <th class="mc">Group</th>
+            <th class="mc">Icon</th>
+            <th class="mc">TVG Name</th>
+            <th class="mc">URL</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+   <!-- hidden div -->
+   <div id="standchange"><p id="chName">Name of channel:</p>
+   <p><input type="text" id="chVal" value="Amedia"  ></p>
+   <input type="button" class="btn2" value="Ok" style="position: relative;display: block; float: right;" onclick="enterChanges();">
+   <div id="list"></div>
+   </div>
+   <!-- hidden div -->
+   <div id="replacechange"><p id="repF">Icon URL string of search:</p>
+   <p><input type="text" id="valFrom" value="XXX"  ></p>
+   <p id="repT">Icon URL string of replace:</p>
+   <p><input type="text" id="valTo" value="YYY"  ></p>
+   <input type="button" class="btn3" value="Ok" style="position: relative;display: block; float: right;" onclick="enterReplace();">
+   <div id="list"></div>
+   </div>
+   
+   </div>
+   <div id="keys">
+   <form id="buttons">
+   <br>
+   <input class="file-picker" value="&nbsp;&nbsp;  Load  &nbsp;&nbsp;" type="button" onclick="fncLoad()"><br>
+   <input class="btn" value="&nbsp;&nbsp;  Save  &nbsp;&nbsp;" type="button" onclick="fncSave()"><br>
+    <input class="btn" value="&nbsp;&nbsp; ◄Up &nbsp; &nbsp;" type="button" onclick="fnUp()"><br>     
+    <input class="btn" value="&nbsp;&nbsp; Down►&nbsp;&nbsp;" type="button" onclick="fnDown()"><br>
+    <input class="btn" value="&nbsp;Add Channel&nbsp;" type="button" onclick="addCh()"><br>
+    <input class="btn" value="&nbsp;Delete&nbsp;" type="button" onclick="delCh()"><br>
+    <input class="btn" value="&nbsp;&nbsp; Icon X►Y&nbsp;&nbsp;" type="button" onclick="dataReplace('i')"><br>
+    <input class="btn" value="&nbsp;&nbsp; URL X►Y&nbsp;&nbsp;" type="button" onclick="dataReplace('u')"><br>
+    <input class="btn" value="&nbsp; EPG Test&nbsp;" type="button" onclick="epgTest()"><br>
+    <input class="btn" value="&nbsp; URL Test&nbsp;" type="button" onclick="urlTest()"><br>
+    <input class="btn" value="&nbsp; Auto complete&nbsp;" type="button" onclick="autoReplace()"><br>
+   </form> 
+   </div>
+</body>
+</html>

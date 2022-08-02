@@ -1,0 +1,62 @@
+h1 {text-align: center;}
+input[type="button"]
+{
+border-width: 4px;  
+}
+#tbl{width: 75%; float: right;}
+#keys{width: 24%;height: 100%;position: fixed;background: #444;}
+#standchange, #replacechange
+{
+border-radius: 14px;
+background-color: #eee;
+box-shadow:4px 4px 8px 1px rgba(50, 50,50, 0.74);
+position: fixed;
+left: 20%;
+top: 30%;
+width:40%;
+height: 14em;
+z-index: 100;
+padding:15px;
+text-align: center;
+visibility: hidden;
+}
+.btn, .file-picker, .btn2, .btn3{
+background-color: #262681;
+color: #fb0;
+font-size:1.5em;
+border-radius: 18px;
+width: 90%;
+display: block;
+margin: 5px auto;
+font-weight: 800;
+}
+.btn2{
+width: 3em;
+top: 2em;
+}
+.btn3{
+width: 3em;
+top: 1em;
+}
+#tvg, #iconUrl, #chVal{background-color: #ff0;
+color: #000;
+font-size:1.0em;
+margin: 5px;
+border-radius: 10px;}
+#chVal{width: 90%;}
+table,
+td {
+    border: 1px solid #333;
+}
+table {border-collapse: collapse;width: 98%;owerflow-wrap: break-word;}
+thead,
+tfoot,
+th {
+    background-color: #262681;
+    border: 1px solid #fff;
+    color: #fb0;
+}
+.ml{text-align: left; background: #eee;}
+.mc{text-align: center;}
+td.mc {background: #eee;}
+.list{}
